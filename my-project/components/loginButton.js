@@ -12,7 +12,7 @@ class LoginButton extends Component {
       return (
         <Button
         title= {this.state.text}
-        buttonStyle={{backgroundColor: '#d71a20'}}
+        buttonStyle={{backgroundColor: '#d71a20', marginTop: 30}}
         />
         
         // <View style={[{ height: "90%",width: "90%", margin: 10, backgroundColor: "red" }]}>
