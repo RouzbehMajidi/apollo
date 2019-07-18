@@ -1,14 +1,12 @@
 import React,{ Component} from 'react';
-import { StyleSheet, Text, View , Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View , Image, TextInput,Button } from 'react-native';
 
-class Dashboard extends View {
+class Dashboard extends Component {
 
     render() {
         return (
             <View style={styles.container}>
-                <Image source={pic} style={{marginTop: 50, marginBottom: 50, alignItems: 'stretch', width: 300, height: 100,}}/>
-                <UsernameField />
-                <PasswordField />
+                <Button title= "Logout" onPress={this.props.handler} buttonStyle={{backgroundColor: '#d71a20'}}/>
             </View>
         )
     }
@@ -20,7 +18,9 @@ const styles = StyleSheet.create({
       backgroundColor: '#fbf7f5',
       alignItems: 'center',
       justifyContent: 'flex-start',
+      
     },
+
   });
 
-export default Login;
+export default Dashboard;

@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import Login from "./components/login";
+import Dashboard from "./components/Dashboard";
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Login></Login>
-    </View>
+    <PageSwapper></PageSwapper>
   );
 }
 
@@ -18,3 +18,37 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+class PageSwapper extends React.Component {
+  constructor(props) {
+    super(props)
+    this.handler = this.handler.bind(this)
+    this.logoutHandler = this.logoutHandler.bind(this)
+    this.state = {currentPage: "login"}
+  }
+
+  handler() {
+    this.setState({
+      currentPage: "dashboard"
+    });
+  }
+
+  logoutHandler() {
+    this.setState({
+      currentPage: "login"
+    });
+  }
+
+  render() {
+    var content = {}
+    if(this.state.currentPage == "login"){
+      content = <Login handler={this.handler}></Login>
+    }
+    else if(this.state.currentPage == "dashboard"){
+      content = <Dashboard handler={this.logoutHandler}></Dashboard>
+    }
+    return <View style={styles.container}>
+      {content}
+    </View>
+  }
+}
