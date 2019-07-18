@@ -1,6 +1,8 @@
 import React,{ Component} from 'react';
 import { StyleSheet, Text, View , Image, TextInput } from 'react-native';
 import { Button, Input } from 'react-native-elements';
+var config = require("../config.json");
+
 var api = require("../api.js");
 
 let pic = {
@@ -26,10 +28,7 @@ class Login extends Component {
         api.signIn(tenant,username,password).then(data => {
           this.props.handler(data.secretKey)
         });
-
-//get api key goes here, callback below
-
-                   
+         
     }
     
     render() {
@@ -37,7 +36,7 @@ class Login extends Component {
             <View style={styles.container}>
                 <Image source={pic} style={{marginTop: 100, marginBottom: 50, alignItems: 'stretch', width: 300, height: 100,}}/>
                 <View style={{width: '80%',flexDirection: 'row'}}>
-                    <Input placeholder='Endpoint' value={this.state.endpoint}/>
+                    <Input label='Endpoint' placeholder={config.endpoint} value={this.state.endpoint} />
                 </View>
                 <View style={{width: '80%',flexDirection: 'row'}}>
                     <Input placeholder='Tenant Name' value={this.state.tenant}/>
