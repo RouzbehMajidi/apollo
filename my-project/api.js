@@ -49,17 +49,11 @@ exports.generateApiKey = (credentials) => {
         active: true,
         roleID: 2
     };
-    
+
     return axios(config.endpoint + "/apikeys",options)
     .then((response) => {
-        return response.data;
+        return response.data.secretKey;
     })
-    .then(saveApiKey)
-    .catch(console.log);
-};
-
-var saveApiKey = (apiKey) => {
-    console.log(apiKey);
 };
 
 exports.listComputers = () => {
@@ -91,5 +85,4 @@ exports.getComputer = (id) => {
 };
 
 // this.getComputer(1).then(console.log).catch(console.log)
-
-this.signIn(config.tenantName, config.username, config.password);
+//  this.signIn(config.tenantName, config.username, config.password)

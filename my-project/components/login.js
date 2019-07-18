@@ -19,15 +19,17 @@ class Login extends Component {
         var username = this.state.username;
         var password = this.state.password;
 
-        if(endpoint == "" || tenant == "" || username == "" || password == "") {
-          return
+        if( tenant == "" || username == "" || password == "") {
+          return;
         }
 
-        api.signIn(tenant,username,password);
+        api.signIn(tenant,username,password).then(data => {
+          this.props.handler(data.secretKey)
+        });
 
 //get api key goes here, callback below
 
-        this.props.handler(apiKey);            
+                   
     }
     
     render() {
