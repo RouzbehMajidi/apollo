@@ -1,6 +1,6 @@
 import React,{ Component} from 'react';
-import { StyleSheet, Text, View , Image, TextInput,Button } from 'react-native';
-import { Input } from 'react-native-elements';
+import { StyleSheet, Text, View , Image, TextInput } from 'react-native';
+import { Button, Input } from 'react-native-elements';
 var api = require("../api.js");
 
 let pic = {
@@ -48,7 +48,7 @@ class Login extends Component {
                 <View style={{width: '80%',flexDirection: 'row'}}>
                     <Input placeholder='Password' secureTextEntry={true} value={this.state.password}/>
                 </View>
-                <Button title= "Login!" onPress={this.props.handler} buttonStyle={{backgroundColor: '#d71a20'}}/>
+                <Button title= "Login!" onPress={this.props.handler} buttonStyle={{backgroundColor: '#d71a20', marginTop: 20}}/>
             </View>
         )
     }

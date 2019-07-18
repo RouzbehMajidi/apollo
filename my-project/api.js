@@ -53,7 +53,7 @@ exports.generateApiKey = (credentials) => {
     return axios(config.endpoint + "/apikeys",options)
     .then((response) => {
         return response.data.secretKey;
-    })
+    });
 };
 
 exports.listComputers = () => {
