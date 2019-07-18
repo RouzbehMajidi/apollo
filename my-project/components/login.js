@@ -4,7 +4,6 @@ import UsernameField from './usernameField';
 import PasswordField from './passwordField';
 import EndpointField from './endpointField';
 import TenantNameField from './tenantNameField';
-import LoginButton from './loginButton';
 
 let pic = {
     uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Trend-Micro-Logo.svg/1280px-Trend-Micro-Logo.svg.png'

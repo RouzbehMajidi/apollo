@@ -1,5 +1,6 @@
 import React,{ Component} from 'react';
-import { StyleSheet, Text, View , Image, TextInput,Button } from 'react-native';
+import { StyleSheet, Text, View , Image, TextInput } from 'react-native';
+import {Button} from 'react-native-elements';
 
 class Dashboard extends Component {
 
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#fbf7f5',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      
+      marginTop: 30
     },
 
   });
