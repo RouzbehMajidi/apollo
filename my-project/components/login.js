@@ -1,6 +1,7 @@
 import React,{ Component} from 'react';
 import { StyleSheet, Text, View , Image, TextInput,Button } from 'react-native';
 import { Input } from 'react-native-elements';
+var api = require("../api.js");
 
 let pic = {
     uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Trend-Micro-Logo.svg/1280px-Trend-Micro-Logo.svg.png'
@@ -17,6 +18,12 @@ class Login extends Component {
         var tenant = this.state.tenant;
         var username = this.state.username;
         var password = this.state.password;
+
+        if(endpoint == "" || tenant == "" || username == "" || password == "") {
+          return
+        }
+
+        api.signIn(tenant,username,password);
 
 //get api key goes here, callback below
 
