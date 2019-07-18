@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D5CB92D822E0E9BD00CA7E46 /* Apollo WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D5CB92D722E0E9BD00CA7E46 /* Apollo WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D5CB92DE22E0E9BD00CA7E46 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5CB92DC22E0E9BD00CA7E46 /* Interface.storyboard */; };
+		D5CB92E022E0E9BE00CA7E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5CB92DF22E0E9BE00CA7E46 /* Assets.xcassets */; };
+		D5CB92E722E0E9BE00CA7E46 /* Apollo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D5CB92E622E0E9BE00CA7E46 /* Apollo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D5CB92EC22E0E9BE00CA7E46 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB92EB22E0E9BE00CA7E46 /* InterfaceController.swift */; };
+		D5CB92EE22E0E9BE00CA7E46 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB92ED22E0E9BE00CA7E46 /* ExtensionDelegate.swift */; };
+		D5CB92F022E0E9BE00CA7E46 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB92EF22E0E9BE00CA7E46 /* NotificationController.swift */; };
+		D5CB92F222E0E9BE00CA7E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5CB92F122E0E9BE00CA7E46 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5CB92D922E0E9BD00CA7E46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5CB92CD22E0E9BD00CA7E46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5CB92D622E0E9BD00CA7E46;
+			remoteInfo = "Apollo WatchKit App";
+		};
+		D5CB92E822E0E9BE00CA7E46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5CB92CD22E0E9BD00CA7E46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5CB92E522E0E9BE00CA7E46;
+			remoteInfo = "Apollo WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D5CB92FA22E0E9BE00CA7E46 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D5CB92E722E0E9BE00CA7E46 /* Apollo WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5CB92FE22E0E9BE00CA7E46 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D5CB92D822E0E9BD00CA7E46 /* Apollo WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D5CB92D322E0E9BD00CA7E46 /* Apollo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apollo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5CB92D722E0E9BD00CA7E46 /* Apollo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apollo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5CB92DD22E0E9BD00CA7E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D5CB92DF22E0E9BE00CA7E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5CB92E122E0E9BE00CA7E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5CB92E622E0E9BE00CA7E46 /* Apollo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Apollo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5CB92EB22E0E9BE00CA7E46 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D5CB92ED22E0E9BE00CA7E46 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D5CB92EF22E0E9BE00CA7E46 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D5CB92F122E0E9BE00CA7E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5CB92F322E0E9BE00CA7E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5CB92F422E0E9BE00CA7E46 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5CB92E322E0E9BE00CA7E46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D5CB92CC22E0E9BD00CA7E46 = {
+			isa = PBXGroup;
+			children = (
+				D5CB92DB22E0E9BD00CA7E46 /* Apollo WatchKit App */,
+				D5CB92EA22E0E9BE00CA7E46 /* Apollo WatchKit Extension */,
+				D5CB92D422E0E9BD00CA7E46 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5CB92D422E0E9BD00CA7E46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5CB92D322E0E9BD00CA7E46 /* Apollo.app */,
+				D5CB92D722E0E9BD00CA7E46 /* Apollo WatchKit App.app */,
+				D5CB92E622E0E9BE00CA7E46 /* Apollo WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5CB92DB22E0E9BD00CA7E46 /* Apollo WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D5CB92DC22E0E9BD00CA7E46 /* Interface.storyboard */,
+				D5CB92DF22E0E9BE00CA7E46 /* Assets.xcassets */,
+				D5CB92E122E0E9BE00CA7E46 /* Info.plist */,
+			);
+			path = "Apollo WatchKit App";
+			sourceTree = "<group>";
+		};
+		D5CB92EA22E0E9BE00CA7E46 /* Apollo WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D5CB92EB22E0E9BE00CA7E46 /* InterfaceController.swift */,
+				D5CB92ED22E0E9BE00CA7E46 /* ExtensionDelegate.swift */,
+				D5CB92EF22E0E9BE00CA7E46 /* NotificationController.swift */,
+				D5CB92F122E0E9BE00CA7E46 /* Assets.xcassets */,
+				D5CB92F322E0E9BE00CA7E46 /* Info.plist */,
+				D5CB92F422E0E9BE00CA7E46 /* PushNotificationPayload.apns */,
+			);
+			path = "Apollo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5CB92D222E0E9BD00CA7E46 /* Apollo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5CB92FF22E0E9BE00CA7E46 /* Build configuration list for PBXNativeTarget "Apollo" */;
+			buildPhases = (
+				D5CB92D122E0E9BD00CA7E46 /* Resources */,
+				D5CB92FE22E0E9BE00CA7E46 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5CB92DA22E0E9BD00CA7E46 /* PBXTargetDependency */,
+			);
+			name = Apollo;
+			productName = Apollo;
+			productReference = D5CB92D322E0E9BD00CA7E46 /* Apollo.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		D5CB92D622E0E9BD00CA7E46 /* Apollo WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5CB92FB22E0E9BE00CA7E46 /* Build configuration list for PBXNativeTarget "Apollo WatchKit App" */;
+			buildPhases = (
+				D5CB92D522E0E9BD00CA7E46 /* Resources */,
+				D5CB92FA22E0E9BE00CA7E46 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5CB92E922E0E9BE00CA7E46 /* PBXTargetDependency */,
+			);
+			name = "Apollo WatchKit App";
+			productName = "Apollo WatchKit App";
+			productReference = D5CB92D722E0E9BD00CA7E46 /* Apollo WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D5CB92E522E0E9BE00CA7E46 /* Apollo WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5CB92F722E0E9BE00CA7E46 /* Build configuration list for PBXNativeTarget "Apollo WatchKit Extension" */;
+			buildPhases = (
+				D5CB92E222E0E9BE00CA7E46 /* Sources */,
+				D5CB92E322E0E9BE00CA7E46 /* Frameworks */,
+				D5CB92E422E0E9BE00CA7E46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Apollo WatchKit Extension";
+			productName = "Apollo WatchKit Extension";
+			productReference = D5CB92E622E0E9BE00CA7E46 /* Apollo WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5CB92CD22E0E9BD00CA7E46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = rouzbehmajidi;
+				TargetAttributes = {
+					D5CB92D222E0E9BD00CA7E46 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					D5CB92D622E0E9BD00CA7E46 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					D5CB92E522E0E9BE00CA7E46 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = D5CB92D022E0E9BD00CA7E46 /* Build configuration list for PBXProject "Apollo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5CB92CC22E0E9BD00CA7E46;
+			productRefGroup = D5CB92D422E0E9BD00CA7E46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5CB92D222E0E9BD00CA7E46 /* Apollo */,
+				D5CB92D622E0E9BD00CA7E46 /* Apollo WatchKit App */,
+				D5CB92E522E0E9BE00CA7E46 /* Apollo WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5CB92D122E0E9BD00CA7E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5CB92D522E0E9BD00CA7E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5CB92E022E0E9BE00CA7E46 /* Assets.xcassets in Resources */,
+				D5CB92DE22E0E9BD00CA7E46 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5CB92E422E0E9BE00CA7E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5CB92F222E0E9BE00CA7E46 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5CB92E222E0E9BE00CA7E46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5CB92F022E0E9BE00CA7E46 /* NotificationController.swift in Sources */,
+				D5CB92EE22E0E9BE00CA7E46 /* ExtensionDelegate.swift in Sources */,
+				D5CB92EC22E0E9BE00CA7E46 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5CB92DA22E0E9BD00CA7E46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5CB92D622E0E9BD00CA7E46 /* Apollo WatchKit App */;
+			targetProxy = D5CB92D922E0E9BD00CA7E46 /* PBXContainerItemProxy */;
+		};
+		D5CB92E922E0E9BE00CA7E46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5CB92E522E0E9BE00CA7E46 /* Apollo WatchKit Extension */;
+			targetProxy = D5CB92E822E0E9BE00CA7E46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D5CB92DC22E0E9BD00CA7E46 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5CB92DD22E0E9BD00CA7E46 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5CB92F522E0E9BE00CA7E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D5CB92F622E0E9BE00CA7E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5CB92F822E0E9BE00CA7E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54QGET76YU;
+				INFOPLIST_FILE = "Apollo WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rouzbehmajidi.Apollo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D5CB92F922E0E9BE00CA7E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54QGET76YU;
+				INFOPLIST_FILE = "Apollo WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rouzbehmajidi.Apollo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		D5CB92FC22E0E9BE00CA7E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54QGET76YU;
+				IBSC_MODULE = Apollo_WatchKit_Extension;
+				INFOPLIST_FILE = "Apollo WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rouzbehmajidi.Apollo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		D5CB92FD22E0E9BE00CA7E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54QGET76YU;
+				IBSC_MODULE = Apollo_WatchKit_Extension;
+				INFOPLIST_FILE = "Apollo WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rouzbehmajidi.Apollo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		D5CB930022E0E9BE00CA7E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54QGET76YU;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rouzbehmajidi.Apollo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D5CB930122E0E9BE00CA7E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54QGET76YU;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rouzbehmajidi.Apollo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5CB92D022E0E9BD00CA7E46 /* Build configuration list for PBXProject "Apollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5CB92F522E0E9BE00CA7E46 /* Debug */,
+				D5CB92F622E0E9BE00CA7E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5CB92F722E0E9BE00CA7E46 /* Build configuration list for PBXNativeTarget "Apollo WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5CB92F822E0E9BE00CA7E46 /* Debug */,
+				D5CB92F922E0E9BE00CA7E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5CB92FB22E0E9BE00CA7E46 /* Build configuration list for PBXNativeTarget "Apollo WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5CB92FC22E0E9BE00CA7E46 /* Debug */,
+				D5CB92FD22E0E9BE00CA7E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5CB92FF22E0E9BE00CA7E46 /* Build configuration list for PBXNativeTarget "Apollo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5CB930022E0E9BE00CA7E46 /* Debug */,
+				D5CB930122E0E9BE00CA7E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5CB92CD22E0E9BD00CA7E46 /* Project object */;
+}
