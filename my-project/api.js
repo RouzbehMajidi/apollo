@@ -1,37 +1,61 @@
-var rp = require('request-promise');
+const axios = require("axios");
+const uuid = require("uuid/v4");
 const config = require('./config.json');
 
 const defaults = {
-    uri: config.endpoint,
+    url: config.endpoint,
     headers: {
-        "api-secret-key":config.apiKey,
-        "api-version":config.apiVersion
+        "api-version":config.apiVersion,
+        "Content-Type":"application/json"
     },
-    json: true // Automatically parses the JSON string in the response
 };
 
 exports.signIn = (tenantName, username, password) => {
-    let options = defaults;
-    options.uri += "/sessions";
-    options.method = "POST";
+    let options = { ... defaults};
+    options.url += "/sessions";
+    options.method = "post";
 
-    options.body = {
-        "tenantName":tenantName,
-        "username":username,
-        "password":password
+    options.data = {
+        tenantName:tenantName,
+        userName:username,
+        password:password
     };
 
-    return rp(options).then(data => {
-        return this.generateApiKey();
-    });
+    options.withCredentials = true;
+
+    return axios(options)
+    .then((response) => {
+        return {RID: response.data.RID,SID: response.headers["set-cookie"][0]};
+    })
+    .then(credentials => {
+        return this.generateApiKey(credentials);
+    })
+    .catch(console.log);
 };
 
-exports.generateApiKey = (sID, rID) => {
-    let options = defaults;
-    options.uri += "/apikeys";
-    options.method = "POST";
+exports.generateApiKey = (credentials) => {
+    let options = { ... defaults};
+    options.method = "post";
+    options.withCredentials = true;
 
-    return rp(options).then(saveApiKey);
+    options.headers.Cookie = credentials.SID;
+    options.headers.RID = credentials.RID;
+
+    options.data = {
+        keyName: `APOLLO API KEY-${uuid()}`,
+        description: "Auto Generated API Key for Apollo",
+        locale: "en-US",
+        timeZone: "GMT",
+        active: true,
+        roleID: 2
+    };
+    
+    return axios(config.endpoint + "/apikeys",options)
+    .then((response) => {
+        return response.data;
+    })
+    .then(saveApiKey)
+    .catch(console.log);
 };
 
 var saveApiKey = (apiKey) => {
@@ -40,14 +64,32 @@ var saveApiKey = (apiKey) => {
 
 exports.listComputers = () => {
     let options = { ... defaults};
-    options.uri += "/computers";
+    options.url += "/computers";
+    options.headers["api-secret-key"] = config.apiKey;
 
-    return rp(options);
+    return axios(options)
+    .then((response) => {
+        return response.data;
+    })
+    .catch(response => {
+        console.log(response.data);
+    });
 };
 
-exports.getComputers = (id) => {
+exports.getComputer = (id) => {
     let options = { ... defaults};
-    options.uri += `/computers/${id}?expand=none`;
+    options.url += `/computers/${id}?expand=none`;
+    options.headers["api-secret-key"] = config.apiKey;
 
-    return rp(options);
+    return axios(options)
+    .then((response) => {
+        return response.data;
+    })
+    .catch(response => {
+        console.log(response.data);
+    });
 };
+
+// this.getComputer(1).then(console.log).catch(console.log)
+
+this.signIn(config.tenantName, config.username, config.password);
