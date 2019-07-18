@@ -24,11 +24,12 @@ class PageSwapper extends React.Component {
     super(props)
     this.handler = this.handler.bind(this)
     this.logoutHandler = this.logoutHandler.bind(this)
-    this.state = {currentPage: "login"}
+    this.state = {currentPage: "login", apiKey: null}
   }
 
-  handler() {
+  handler(apiKey) {
     this.setState({
+      apiKey: apiKey,
       currentPage: "dashboard"
     });
   }
