@@ -1,5 +1,6 @@
 import React,{ Component} from 'react';
-import { StyleSheet, Text, View , Image, TextInput,Button } from 'react-native';
+import { StyleSheet, Text, View , Image, TextInput } from 'react-native';
+import {Button} from 'react-native-elements';
 import UsernameField from './usernameField';
 import PasswordField from './passwordField';
 import EndpointField from './endpointField';
@@ -18,7 +19,7 @@ class Login extends Component {
                 <TenantNameField />
                 <UsernameField />
                 <PasswordField />
-                <Button title= "Login!" onPress={this.props.handler} buttonStyle={{backgroundColor: '#d71a20'}}/>
+                <Button title= "Login" onPress={this.props.handler} buttonStyle={{backgroundColor: '#d71a20', marginTop: 20}}/>
             </View>
         )
     }

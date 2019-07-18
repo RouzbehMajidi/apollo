@@ -7,7 +7,7 @@ class Dashboard extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Button title= "Logout" onPress={this.props.handler} buttonStyle={{backgroundColor: '#d71a20'}}/>
+                <Button title= "Logout" onPress={this.props.handler} buttonStyle={{backgroundColor: '#d71a20', marginTop:20}}/>
             </View>
         )
     }
