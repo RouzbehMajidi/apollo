@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, AsyncStorage, Alert } from 'react-native';
 import Login from "./components/login";
 import Dashboard from "./components/Dashboard";
 
@@ -14,39 +14,55 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fbf7f5',
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
 class PageSwapper extends React.Component {
   constructor(props) {
     super(props)
-    this.handler = this.handler.bind(this)
+    this.loginHandler = this.loginHandler.bind(this)
     this.logoutHandler = this.logoutHandler.bind(this)
-    this.state = {currentPage: "login", apiKey: null}
+    this.state = { 
+      apiKey: ''
+    }
   }
 
-  handler(apiKey) {
-    this.setState({
-      apiKey: apiKey,
-      currentPage: "dashboard"
-    });
+  // componentDidMount() {
+  //   AsyncStorage.getItem("apiKey", (errs,result) => {
+  //     if (!errs) {
+  //         if (result !== null) {
+  //             this.setState({apiKey: result});
+  //         }
+  //      }
+  // })
+  // }
+
+  loginHandler(apiKey) {
+    // AsyncStorage.setItem("apiKey",apiKey, () => {
+      this.setState({
+        "apiKey": apiKey
+      });
+    // });
   }
 
   logoutHandler() {
-    this.setState({
-      currentPage: "login"
-    });
+    // AsyncStorage.removeItem("apiKey", () => {
+      this.setState({
+        "apiKey": ''
+      });
+    // });
   }
+
 
   render() {
     var content = {}
-    if(this.state.currentPage == "login"){
-      content = <Login handler={this.handler}></Login>
+    if (this.state.apiKey) {
+      content = <Dashboard handler={this.logoutHandler} apiKey={this.state.apiKey}></Dashboard>
     }
-    else if(this.state.currentPage == "dashboard"){
-      content = <Dashboard handler={this.logoutHandler}></Dashboard>
+    else{
+      content = <Login handler={this.loginHandler}></Login>
     }
     return <View style={styles.container}>
       {content}

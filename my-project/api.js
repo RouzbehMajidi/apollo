@@ -10,7 +10,9 @@ const defaults = {
     },
 };
 
-exports.signIn = (tenantName, username, password) => {
+// exports.signIn = (tenantName, username, password) => {
+async function signIn(tenantName, username, password) {
+
     let options = { ... defaults};
     options.url += "/sessions";
     options.method = "post";
@@ -30,7 +32,9 @@ exports.signIn = (tenantName, username, password) => {
     .then(credentials => {
         return this.generateApiKey(credentials);
     })
-    .catch(console.log);
+    .catch(err => {
+        return err}
+    );
 };
 
 exports.generateApiKey = (credentials) => {
@@ -53,13 +57,13 @@ exports.generateApiKey = (credentials) => {
     return axios(config.endpoint + "/apikeys",options)
     .then((response) => {
         return response.data.secretKey;
-    });
+    })
 };
 
-exports.listComputers = () => {
+exports.listComputers = (apiKey) => {
     let options = { ... defaults};
     options.url += "/computers";
-    options.headers["api-secret-key"] = config.apiKey;
+    options.headers["api-secret-key"] = apiKey;
 
     return axios(options)
     .then((response) => {
@@ -84,5 +88,4 @@ exports.getComputer = (id) => {
     });
 };
 
-// this.getComputer(1).then(console.log).catch(console.log)
-//  this.signIn(config.tenantName, config.username, config.password)
+module.exports.signIn = signIn;
